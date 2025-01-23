@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -26,13 +26,10 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-  <!-- </head>
-  <script src="/src/index.js"></script> -->
+ <script src="/src/index.js"></script>
   <body>
-    <style>
-
+     <style>
        body {
-        
         font-family: Arial, Helvetica, sans-serif;
         background-color: lightgreen;
         text-align: center;
@@ -55,13 +52,31 @@
         border-radius: 5px;
       }
 
-    </style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: right;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+    
+
+    </style> 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
-     <h1>מעקב לידים</h1>  
-    <form class="main-db">
-    <!-- <label for="searchInput2"></label>
-    <input type="search" id="searchInput2" placeholder="חיפוש"> -->
+     <h1>מעקב לידים</h1>
+     <form class="main-db">
+    <label for="searchInput2"></label>
+    <!-- <input type="search" id="searchInput2" placeholder="חיפוש">  -->
     <button type="button" id="addNewLead">חיפוש</button>
     <label for="searchInput"></label>
     <input type="text" id="searchInput">
@@ -73,6 +88,7 @@
 
     </form>
     <div id="root"></div>
+    <div id="root2"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -107,5 +123,29 @@
     <button type="button" id="exportToCSV">  ייצא נתונים לקובץ csv </button>
   </form>
   </bdo>
+  
+
+  <div>
+    <bdo dir="rtl">
+    <table id="leadTable">
+      <thead>
+        <tr>
+          <th>שם</th>
+          <th>תאריך</th>
+          <th>טלפון</th>
+          <th>אימייל</th>
+          <th>נוטל תרופות בחצי שנה האחרונה</th>
+          <th>סובל מכאבים כרוניים מתמשכים</th>
+          <th>קופת חולים</th>
+          <th>רישיון חדש / חידוש</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be dynamically generated here -->
+      </tbody>
+    </table>
+  </div>
+    </bdo>
   </body>
 </html>
+ 
